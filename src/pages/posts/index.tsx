@@ -51,11 +51,12 @@ export const getStaticProps: GetStaticProps = async () => {
         pageSize: 100,
     })
 
+
     const posts = response.results.map(post => {
         return {
             slug: post.uid,
             title: RichText.asText(post.data.title),
-            excerpt: post.data.content?.find(content => content.type === "paragraph")?.text ?? "",
+            excerpt: post.data.content.find(content => content.type === "paragraph")?.text ?? "",
             updatedAt: new Date(post.last_publication_date).toLocaleDateString("pt-BR", {
                 day: "2-digit",
                 month: "long",
