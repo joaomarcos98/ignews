@@ -15,6 +15,8 @@ export function SubcribeButton({ priceId }: SubscribeButtonProps) {
     const [session] = useSession();
     const router = useRouter()
 
+    
+
     async function handleSubcribe() {
 
         if (!session) {
@@ -23,6 +25,8 @@ export function SubcribeButton({ priceId }: SubscribeButtonProps) {
         }
 
         if (session.activeSubscription){
+            console.log("certo");
+            
             router.push("/posts")
             return;
         }
