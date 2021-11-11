@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next"
 import Head from "next/head";
 import { stripe } from "../services/stripe";
-import { SubcribeButton } from "../components/SubscribeButton";
+import { SubscribeButton } from "../components/SubscribeButton";
 
 import styles from "./home.module.scss"
 
@@ -27,7 +27,7 @@ export default function Home({ product }: HomeProps) {
                         Get acess to all the publications <br />
                         <span>for {product.amount} month</span>
                     </p>
-                    <SubcribeButton priceId={product.priceId} />
+                    <SubscribeButton />
                 </section>
                 <img src="/images/avatar.svg" alt="Girl coding" />
 
