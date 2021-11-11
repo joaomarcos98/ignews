@@ -19,8 +19,6 @@ export function SubscribeButton() {
         }
 
         if (session.activeSubscription){
-            console.log("certo");
-            
             router.push("/posts");
             return;
         }
